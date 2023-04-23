@@ -1,0 +1,22 @@
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  user: Bytes! # address
+  allocationType: BigInt! # uint256
+}
+
+type Claim @entity {
+  id: ID!
+  user: Bytes! # address
+  amount: BigInt! # uint256
+  block_number: BigInt!
+  allocation_type: BigInt! # uint256
+  created_at: BigInt!
+  investor_id: BigInt!
+}
+
+type UpdateRootHistory @entity {
+  id: ID!
+  created_at: BigInt!
+  block_number: BigInt!
+}
